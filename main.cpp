@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <ctime>
 using namespace std;
 
 //Estructura de un punto con d dimensiones
@@ -33,8 +34,9 @@ Punto *crearPuntos(int d){
 }
 
 int main() {
-    //Declaracion de un punto con d dimensiones
-    Punto *mapa = crearPuntos(500);
+    srand(time(NULL));
+    //Declaracion del mapa de puntos con d dimensiones
+    Punto *mapa = crearPuntos(5000);
     vector<float> distancias;
     for(int i=0; i < 100; i++){
         for(int j=0; j < 100; j++){
